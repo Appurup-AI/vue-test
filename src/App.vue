@@ -18,7 +18,7 @@ const accountStore = useAccountStore()
           class="row__marks row__el"
           type="text"
           placeholder="XXX"
-          :value="accountStore.accounts[index].marks.map((el) => el.text).join(';')"
+          :value="accountStore.accounts[index].marks.map((el: any) => el.text).join(';')"
           @input="
             (event) => {
               accountStore.accounts[index].marks = []
