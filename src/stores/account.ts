@@ -23,8 +23,6 @@ export const useAccountStore = defineStore(
     const accounts = ref<IAccount[]>([])
 
     const handleDeleteAccount = (id: number | undefined) => {
-      if (id === undefined) return
-
       accounts.value.splice(
         accounts.value.indexOf(accounts.value.findIndex((el) => el.id === id)),
         1,
